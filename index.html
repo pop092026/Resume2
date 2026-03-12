@@ -670,52 +670,42 @@
 
 <style>
 @media print {
-  /* 隱藏不需要列印的元素 */
   nav, .scroll-indicator, div[style*="回到最上方"], footer, button { display: none !important; }
 
-  /* 基本設定 */
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   body { background: #fff !important; margin: 0; padding: 0; font-size: 11px; }
   main { padding: 0 24px !important; max-width: 100% !important; }
 
-  /* Hero 區 */
+  /* 強制所有動畫/透明元素顯示 */
+  * { animation: none !important; transition: none !important; }
+  [style*="opacity:0"] { opacity: 1 !important; }
+  [style*="opacity: 0"] { opacity: 1 !important; }
+
+  /* Hero */
   .hero {
-    min-height: auto !important;
+    min-height: 0 !important;
+    height: auto !important;
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     background: #f2f2f0 !important;
     border-bottom: 2px solid #c9a84c !important;
-    padding: 0 !important;
+    overflow: visible !important;
     page-break-after: avoid;
   }
+  .hero-left, .hero-right { opacity: 1 !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; }
   .hero-left { padding: 32px 24px 32px 32px !important; }
   .hero-right { padding: 32px 32px 32px 16px !important; }
+  .hero-tag, .hero-name, .hero-summary, .contact-grid { opacity: 1 !important; animation: none !important; }
 
-  /* 聯絡框 */
-  .contact-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
-  .contact-item { padding: 10px !important; background: #faf8f4 !important; border: 1px solid #d8d0c4 !important; }
+  .contact-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; opacity: 1 !important; }
+  .contact-item { padding: 10px !important; background: #faf8f4 !important; border: 1px solid #d8d0c4 !important; opacity: 1 !important; }
 
-  /* 區塊 */
   section { padding: 24px 0 !important; break-inside: avoid; border-bottom: 1px solid #d8d0c4 !important; }
-  .section-num { font-size: 28px !important; }
-  .section-title { font-size: 18px !important; }
-
-  /* 工作經歷 */
   .exp-item { grid-template-columns: 140px 1fr !important; gap: 16px !important; margin-bottom: 24px !important; padding-bottom: 24px !important; }
-  .exp-company { font-size: 14px !important; }
-
-  /* 專案照片 */
-  img[alt="春酒"], img[alt="家庭日"], img[alt="物流展"], img[alt="全員出國旅遊"] {
-    height: 160px !important;
-  }
-
-  /* 學歷 */
   .edu-grid { grid-template-columns: 1fr 1fr !important; }
-
-  /* 技能 */
   .skills-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  img[alt="春酒"], img[alt="家庭日"], img[alt="物流展"], img[alt="全員出國旅遊"] { height: 140px !important; }
 
-  /* 頁面設定 */
   @page { margin: 12mm; size: A4; }
 }
 </style>
