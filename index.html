@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 60px 80px 80px;
+    padding: 60px 40px 60px 60px;
     position: relative;
     z-index: 1;
   }
@@ -116,21 +116,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 80px 80px 40px;
+    padding: 60px 60px 60px 32px;
     position: relative;
     z-index: 1;
   }
 
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     opacity: 0;
     animation: fadeUp 0.8s ease 1s forwards;
   }
 
   .contact-item {
-    padding: 20px;
+    padding: 14px 12px;
     border: 1px solid var(--line);
     border-radius: 2px;
     background: #faf8f4;
@@ -191,7 +191,7 @@
   }
 
   /* MAIN */
-  main { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  main { max-width: 960px; margin: 0 auto; padding: 0 40px; }
 
   /* SECTION */
   section {
@@ -714,7 +714,7 @@
 
 <!-- STICKY NAV -->
 <nav style="position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #d8d0c4;padding:0 40px;">
-  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px;">
+  <div style="max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px;">
     <span style="font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;color:#3d4f63;letter-spacing:1px;">王師綾 · Rita</span>
     <div style="display:flex;gap:32px;">
       <a href="#top" style="font-size:12px;color:#7a7065;text-decoration:none;font-weight:500;letter-spacing:1px;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#7a7065'">學歷</a>
@@ -748,16 +748,21 @@
       <p>善於統籌規劃各式活動，帶領跨部門專案小組執行落地。</p>
       <p>心思細膩且擅於觀察，得即時掌握需求並協助問題處理。</p>
     </div>
+    <div style="margin-top:24px;padding:16px 20px;background:rgba(201,168,76,0.08);border-left:3px solid var(--gold);opacity:0;animation:fadeUp 0.8s ease 1s forwards;">
+      <div style="font-size:10px;letter-spacing:3px;font-weight:600;color:var(--gold);margin-bottom:6px;">APPLICATION</div>
+      <div style="display:flex;align-items:center;gap:10px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAFnklEQVR4nO3Wb4wU5R0H8O/zzJ+d2dlj7w93e8AR/km3pHSpchpLRC7axoT2Tb3uVZMLgiG0NVE0NsHE6Ozii75QX9REg9pCa4KGPUipJCBUwgIWIoqgcnJ6HJyEO1budm/39nZ2Znae5+cLkAI1aWITNc1+3kyeeZ6ZfH/zzDzzAHV1dXV1dXXfS0TEiIh91zn+QyaZVAjgX7UJYJRMKt9VnuueEAGcARK6hhHPD3OAzTBCFXg+CGAMoGvH27bNcbkYCQDo6uJZAMhmkU2lRCqbvVxYNovUNe1PxsYok0zKVCqloKvran9fXx/vb21lyGaRTqeD6wISwBln8vTvH+pmhz980ChOJjjnXM5sO+MvXfLKD17+01byfcauDv92MAAg2+bsmY3y3e7eJyPRhvva27S4v/UtTYxVEKlOAc2NyC27fUv8zTfWgqXAkJZExJ7bv39RrlC4I6Lr78Qsy73gOMkvHCckhFB6E4mXjo2M/Mbj6kyqVi7OabF25Sr+r7iqlSbHC+Pzp08/Ouq73TXBzMB1as2mmYmY+nIHmBNUqxMb2me9xjo7a+qBFStUlk4HJ5IP/KJRVuy5G1YfKhx9b2Fh5d0iqAnu7v+XnHZuUMw+dGzNwNr1/YvwwvMA8Ni2rctU3fzjmOtGAuCXpWq1lOdq7yTjMCHw9uCgVVOUx3NcIOoHl1pclMtMf85UVZSFOFATInpJyBfBFAgRVA0ZCM/F07qmWqVAqscjkX8AGOdjBw8SNBXGJ0Pr2z74SKs+sfHu/NObQ3JgWGGmyby7limTs+apXikntVMnHz1JZAHAVLnqVstTfo2gMEARoElXBmAgmApHQzgSihhhMM+FU/PHL1Qq3nilDH+ynDN1Y69hWcUqAYxJgFhFVRXt80L+yJ2JnywoVrx/Lo3HCwCY2gOI837NdH542+KCx6h0oih5560Ky+XATg9AKDq8JYt4OXcJeuB3RD8+PhvAwKvR6MlNra1r+0dH181tatrklMsGg5xfnHKYE7hjbR2zd1wsFVs7NDVUrDqjJPy84rl7NCu631B5LF8ul0Kut7vJNFxhGE6U+DvzI035Hfv2PBCC9j5jTMK2OQOAA0SRxlVrh1p3vdVWXPwjkj9eyMKf5yBmtMPnEsIyoQ2dh1otQq5enVjU2/sxADy+d691b2yBNRwUZalaFQ8vXz5BAPYd/Sj2s58mvti9e3do5cqV3o0vPgfw1JYtRnrNGvfGPiJijLGrHyGzAZ5WuDz+61Xvtg6d6/RKFQqaLOWiJRAIINYyEyDIaWfPQsbCE5P7Dt50M2PFjTt2LHGC2pMtDY2nLpYn7o02RBVXCM0LvJzp1LaFDf2M3ta23Zss/mW0WOxQNa1fBV/c0dw4a8p3ZIzxR3672f1w3YYJPnG2Sfb19Ejbtlk6nZawbY50WgIA71qxgkNIhLm+qWFwmLcOnhK54dPyzeYC7Wkcx5hBFOk/U2t3J7hYsPBvN3NeBADSWGPIMDhVvJ060d+ZlHndNOMKWIdphoYLvq+qIX1ajegRKxy5qSEUWqdp2tJxx7u1JigeMVoc9PWIGbtGRV9PjwBA6Suhvgp33TKDVIo+vX/V6wvfPnzfMc3F9mUtYIHE/e+XcUtjBINLE0dGnt12TzbGnNTleSB75847DZ8qCzrMcyfOF2damqa3x2KVS/n8PEvTjhQCN9FmNnsP/7zrvc2HDiU64/Gzhz84Mn1O04xgcGQE67u7L9w4pV+/Dl45ctOgoQcf+gMfOPm7gleeq+iq0hKOjHrz5m8988Km9D2MVf7bDb8VRBQqvfTneOHFvyY+I5p2zfnrfo3JTEaxbZsTEbNtm9tE3LZtnsxkFBCxZCajJDMZBQBson+Pu3LNNwv3NRsDSiaV79XOhogY2Tan/6XSurq6urq6uv8LXwLlZc0g8gC/dQAAAABJRU5ErkJggg==" style="height:32px;width:auto;object-fit:contain;"><span style="font-size:13px;color:#3d4f63;font-weight:700;font-family:'Noto Sans TC',sans-serif;">中國信託商業銀行</span></div>
+      <div style="font-size:12px;color:var(--muted);margin-top:3px;font-family:'Noto Sans TC',sans-serif;">人力資源規劃人員（績效管理及人力規劃）</div>
+    </div>
   </div>
   <div class="hero-right">
-    <div class="contact-grid">
+    <div class="contact-grid" style="grid-template-columns:repeat(3,1fr)!important;">
       <div class="contact-item">
         <div class="contact-label">手機</div>
         <div class="contact-value">0983-461-119</div>
       </div>
       <div class="contact-item">
         <div class="contact-label">E-mail</div>
-        <div class="contact-value">pop092026@gmail.com</div>
+        <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="31415e4101080301030771565c50585d1f525e5c">[email&#160;protected]</a></div>
       </div>
       <div class="contact-item">
         <div class="contact-label">地址</div>
@@ -1153,23 +1158,12 @@
 </div>
 
 <footer>
-  <strong>王師綾</strong> · 人力資源規劃人員(績效管理及人力規劃) · pop092026@gmail.com · 0983-461-119
+  <strong>王師綾</strong> &nbsp;·&nbsp; 人力資源規劃人員(績效管理及人力規劃) &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5929362969606b696b6f193e34383035773a3634">[email&#160;protected]</a> &nbsp;·&nbsp; 0983-461-119
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Scroll reveal
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  // Fallback: if sections aren't visible after short delay, show them all
-  setTimeout(() => {
-    sections.forEach(s => s.classList.add('visible'));
-  }, 500);
+      if (e
